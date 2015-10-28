@@ -116,6 +116,7 @@ public class LoginUI extends JFrame implements ActionListener{
    			 System.out.println("UI에서 실행중 =================");
   		   if (fields[0].getText().isEmpty()||fields[1].getText().isEmpty()) {
   			   JOptionPane.showMessageDialog(this, "아이디 또는 비밀번호를 다시 입력해 주세요.");
+  			   break;
   		}else if (service.login(fields[0].getText(), fields[1].getText()).equals("로그인 실패")) {
   			JOptionPane.showMessageDialog(this, "로그인 실패");
   			break;
